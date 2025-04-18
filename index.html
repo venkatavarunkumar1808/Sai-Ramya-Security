@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sai Ramya Security Services | Professional Security Solutions</title>
+    <meta name="description" content="Sai Ramya Security Services provides professional security, housekeeping, valet parking, industrial and mall services in Secunderabad and surrounding areas.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  </head>
+  <body class="font-body bg-neutral-50 text-neutral-900">
+    <header id="navbar" class="fixed w-full bg-transparent transition-all duration-300 z-50">
+      <div class="container mx-auto px-16 py-8 md:py-16 flex justify-between items-center">
+        <a href="#" class="flex items-center space-x-2">
+          <span class="text-white font-heading font-bold text-xl md:text-2xl">Sai Ramya Security</span>
+        </a>
+        
+        <nav class="hidden md:flex space-x-48 font-heading">
+          <a href="#home" class="text-white hover:text-accent-300 transition-colors">Home</a>
+          <a href="#services" class="text-white hover:text-accent-300 transition-colors">Services</a>
+          <a href="#about" class="text-white hover:text-accent-300 transition-colors">About</a>
+          <a href="#contact" class="text-white hover:text-accent-300 transition-colors">Contact</a>
+        </nav>
+        
+        <button class="md:hidden text-white text-2xl" id="mobile-menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden bg-primary-500 fixed inset-0 z-50 flex-col justify-center items-center hidden">
+        <button id="close-menu" class="absolute top-24 right-24 text-white text-3xl">
+          <i class="fas fa-times"></i>
+        </button>
+        <nav class="flex flex-col space-y-16 items-center font-heading text-xl">
+          <a href="#home" class="text-white hover:text-accent-300 transition-colors py-8 w-full text-center">Home</a>
+          <a href="#services" class="text-white hover:text-accent-300 transition-colors py-8 w-full text-center">Services</a>
+          <a href="#about" class="text-white hover:text-accent-300 transition-colors py-8 w-full text-center">About</a>
+          <a href="#contact" class="text-white hover:text-accent-300 transition-colors py-8 w-full text-center">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-500/80 z-10"></div>
+        <div class="absolute inset-0 overflow-hidden">
+          <video class="object-cover w-full h-full" autoplay muted loop>
+            <source src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/GTYSdDW/videoblocks-security-monitor-screens-with-surveillance-cameras-view-1-dark-blue-background_bcwknjdqe__d90b196c6f06d3a75f7774d32d4ca9d6__P360.mp4" type="video/mp4">
+            <!-- Fallback image if video fails to load -->
+            <img src="https://images.unsplash.com/photo-1582139149987-99cd21c7c442?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Security camera" class="object-cover w-full h-full">
+          </video>
+        </div>
+        
+        <div class="container mx-auto px-16 relative z-20 text-white text-center">
+          <h1 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-24" data-aos="fade-up">
+            Sai Ramya Security Services
+          </h1>
+          <p class="text-xl md:text-2xl mb-32 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            Professional security solutions with uncompromised integrity and excellence
+          </p>
+          <div class="flex flex-col md:flex-row justify-center gap-16" data-aos="fade-up" data-aos-delay="400">
+            <a href="#services" class="bg-accent-500 hover:bg-accent-600 transition-colors text-white font-heading font-medium px-32 py-16 rounded-md shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all">
+              Our Services
+            </a>
+            <a href="#contact" class="bg-transparent hover:bg-white/10 border-2 border-white text-white font-heading font-medium px-32 py-16 rounded-md transition-all hover:shadow-lg">
+              Contact Us
+            </a>
+          </div>
+        </div>
+        
+        <div class="absolute bottom-24 left-0 right-0 flex justify-center z-20">
+          <a href="#services" class="text-white animate-pulse-slow">
+            <i class="fas fa-chevron-down text-3xl"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="py-96 bg-white">
+        <div class="container mx-auto px-16">
+          <div class="text-center mb-64">
+            <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary-500 mb-16" data-aos="fade-up">Our Services</h2>
+            <p class="max-w-3xl mx-auto text-neutral-600" data-aos="fade-up" data-aos-delay="100">
+              We provide comprehensive security and facility management solutions tailored to your specific needs.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-32">
+            <!-- Security Services -->
+            <div class="bg-white rounded-lg shadow-card hover:shadow-card-hover transition-all p-24 group" data-aos="fade-up" data-aos-delay="100">
+              <div class="w-64 h-64 rounded-full bg-primary-50 flex items-center justify-center mb-16 mx-auto group-hover:bg-primary-100 transition-colors">
+                <i class="fas fa-shield-alt text-3xl text-primary-500"></i>
+              </div>
+              <h3 class="font-heading font-semibold text-xl text-center mb-16 text-primary-800">Security Services</h3>
+              <p class="text-neutral-600 text-center">Professional security personnel trained to protect your premises, assets, and people with vigilance and expertise.</p>
+              <div class="mt-24 text-center">
+                <a href="#contact" class="inline-block text-primary-500 hover:text-primary-700 font-medium">
+                  Learn More <i class="fas fa-arrow-right ml-8"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Housekeeping -->
+            <div class="bg-white rounded-lg shadow-card hover:shadow-card-hover transition-all p-24 group" data-aos="fade-up" data-aos-delay="200">
+              <div class="w-64 h-64 rounded-full bg-primary-50 flex items-center justify-center mb-16 mx-auto group-hover:bg-primary-100 transition-colors">
+                <i class="fas fa-broom text-3xl text-primary-500"></i>
+              </div>
+              <h3 class="font-heading font-semibold text-xl text-center mb-16 text-primary-800">Housekeeping</h3>
+              <p class="text-neutral-600 text-center">Comprehensive cleaning and maintenance services to keep your facility pristine and create a positive impression.</p>
+              <div class="mt-24 text-center">
+                <a href="#contact" class="inline-block text-primary-500 hover:text-primary-700 font-medium">
+                  Learn More <i class="fas fa-arrow-right ml-8"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Valet Parking -->
+            <div class="bg-white rounded-lg shadow-card hover:shadow-card-hover transition-all p-24 group" data-aos="fade-up" data-aos-delay="300">
+              <div class="w-64 h-64 rounded-full bg-primary-50 flex items-center justify-center mb-16 mx-auto group-hover:bg-primary-100 transition-colors">
+                <i class="fas fa-car text-3xl text-primary-500"></i>
+              </div>
+              <h3 class="font-heading font-semibold text-xl text-center mb-16 text-primary-800">Valet Parking Services</h3>
+              <p class="text-neutral-600 text-center">Professional valet services that enhance guest experience with efficient and courteous parking management.</p>
+              <div class="mt-24 text-center">
+                <a href="#contact" class="inline-block text-primary-500 hover:text-primary-700 font-medium">
+                  Learn More <i class="fas fa-arrow-right ml-8"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Industrial Services -->
+            <div class="bg-white rounded-lg shadow-card hover:shadow-card-hover transition-all p-24 group" data-aos="fade-up" data-aos-delay="400">
+              <div class="w-64 h-64 rounded-full bg-primary-50 flex items-center justify-center mb-16 mx-auto group-hover:bg-primary-100 transition-colors">
+                <i class="fas fa-industry text-3xl text-primary-500"></i>
+              </div>
+              <h3 class="font-heading font-semibold text-xl text-center mb-16 text-primary-800">Industrial Services</h3>
+              <p class="text-neutral-600 text-center">Specialized security and facility management for industrial complexes, warehouses, and manufacturing plants.</p>
+              <div class="mt-24 text-center">
+                <a href="#contact" class="inline-block text-primary-500 hover:text-primary-700 font-medium">
+                  Learn More <i class="fas fa-arrow-right ml-8"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Mall Services -->
+            <div class="bg-white rounded-lg shadow-card hover:shadow-card-hover transition-all p-24 group" data-aos="fade-up" data-aos-delay="500">
+              <div class="w-64 h-64 rounded-full bg-primary-50 flex items-center justify-center mb-16 mx-auto group-hover:bg-primary-100 transition-colors">
+                <i class="fas fa-shopping-mall text-3xl text-primary-500"></i>
+              </div>
+              <h3 class="font-heading font-semibold text-xl text-center mb-16 text-primary-800">Mall Services</h3>
+              <p class="text-neutral-600 text-center">Comprehensive security and facility management solutions customized for shopping malls and retail environments.</p>
+              <div class="mt-24 text-center">
+                <a href="#contact" class="inline-block text-primary-500 hover:text-primary-700 font-medium">
+                  Learn More <i class="fas fa-arrow-right ml-8"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Location Scan -->
+            <div class="bg-white rounded-lg shadow-card hover:shadow-card-hover transition-all p-24 group" data-aos="fade-up" data-aos-delay="600">
+              <div class="w-64 h-64 rounded-full bg-primary-50 flex items-center justify-center mb-16 mx-auto group-hover:bg-primary-100 transition-colors">
+                <i class="fas fa-search-location text-3xl text-primary-500"></i>
+              </div>
+              <h3 class="font-heading font-semibold text-xl text-center mb-16 text-primary-800">Location Scan</h3>
+              <p class="text-neutral-600 text-center">Professional assessment of your premises to identify security vulnerabilities and recommend appropriate solutions.</p>
+              <div class="mt-24 text-center">
+                <a href="#contact" class="inline-block text-primary-500 hover:text-primary-700 font-medium">
+                  Learn More <i class="fas fa-arrow-right ml-8"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-96 bg-primary-50">
+        <div class="container mx-auto px-16">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-48 items-center">
+            <div data-aos="fade-right">
+              <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="Security professional" class="rounded-lg shadow-lg w-full h-auto object-cover" />
+            </div>
+            
+            <div data-aos="fade-left">
+              <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary-500 mb-24">About Us</h2>
+              <p class="text-neutral-700 mb-16">
+                Sai Ramya Security Services was founded with a commitment to providing top-tier security and facility management solutions to businesses and institutions across Secunderabad and surrounding areas.
+              </p>
+              <p class="text-neutral-700 mb-16">
+                Led by Prof. Srinivasa Raju, our team comprises highly trained security professionals with extensive experience in various security domains. We prioritize integrity, vigilance, and excellence in every service we provide.
+              </p>
+              <p class="text-neutral-700 mb-32">
+                Our approach combines modern security technology with thorough human oversight to create comprehensive protection strategies tailored to each client's unique needs.
+              </p>
+              
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-16 text-center">
+                <div>
+                  <div class="text-accent-500 font-bold text-3xl md:text-4xl mb-8">500+</div>
+                  <p class="text-neutral-600">Clients Served</p>
+                </div>
+                <div>
+                  <div class="text-accent-500 font-bold text-3xl md:text-4xl mb-8">1000+</div>
+                  <p class="text-neutral-600">Security Staff</p>
+                </div>
+                <div>
+                  <div class="text-accent-500 font-bold text-3xl md:text-4xl mb-8">15+</div>
+                  <p class="text-neutral-600">Years Experience</p>
+                </div>
+                <div>
+                  <div class="text-accent-500 font-bold text-3xl md:text-4xl mb-8">24/7</div>
+                  <p class="text-neutral-600">Support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="py-96 bg-white">
+        <div class="container mx-auto px-16">
+          <div class="text-center mb-64">
+            <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary-500 mb-16" data-aos="fade-up">Client Testimonials</h2>
+            <p class="max-w-3xl mx-auto text-neutral-600" data-aos="fade-up" data-aos-delay="100">
+              Hear what our clients have to say about our security and facility management services.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-32">
+            <div class="bg-white p-32 rounded-lg shadow-card border border-neutral-100" data-aos="fade-up" data-aos-delay="100">
+              <div class="flex justify-center mb-16">
+                <i class="fas fa-quote-left text-4xl text-primary-200"></i>
+              </div>
+              <p class="text-neutral-700 mb-24 text-center">
+                "Sai Ramya's security team has been instrumental in creating a safe environment at our mall. Their staff is professional, vigilant, and courteous to our customers."
+              </p>
+              <div class="text-center">
+                <h4 class="font-heading font-semibold text-primary-800">Rahul Sharma</h4>
+                <p class="text-neutral-500 text-sm">Mall Manager, Hyderabad Central</p>
+              </div>
+            </div>
+            
+            <div class="bg-white p-32 rounded-lg shadow-card border border-neutral-100" data-aos="fade-up" data-aos-delay="200">
+              <div class="flex justify-center mb-16">
+                <i class="fas fa-quote-left text-4xl text-primary-200"></i>
+              </div>
+              <p class="text-neutral-700 mb-24 text-center">
+                "We've partnered with Sai Ramya for our industrial complex security for over 5 years. Their attention to detail and proactive approach has prevented numerous security incidents."
+              </p>
+              <div class="text-center">
+                <h4 class="font-heading font-semibold text-primary-800">Priya Patel</h4>
+                <p class="text-neutral-500 text-sm">Operations Director, Sunshine Industries</p>
+              </div>
+            </div>
+            
+            <div class="bg-white p-32 rounded-lg shadow-card border border-neutral-100" data-aos="fade-up" data-aos-delay="300">
+              <div class="flex justify-center mb-16">
+                <i class="fas fa-quote-left text-4xl text-primary-200"></i>
+              </div>
+              <p class="text-neutral-700 mb-24 text-center">
+                "The housekeeping services provided by Sai Ramya have consistently exceeded our expectations. Our office has never looked better, and their staff is always courteous."
+              </p>
+              <div class="text-center">
+                <h4 class="font-heading font-semibold text-primary-800">Vikram Singh</h4>
+                <p class="text-neutral-500 text-sm">Facility Manager, TechSpace Solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-64 bg-primary-500 text-white">
+        <div class="container mx-auto px-16 text-center">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl mb-24" data-aos="fade-up">Ready to Enhance Your Security?</h2>
+          <p class="max-w-3xl mx-auto mb-32" data-aos="fade-up" data-aos-delay="100">
+            Contact us today for a free consultation and learn how our security solutions can be tailored to your specific needs.
+          </p>
+          <a href="#contact" class="inline-block bg-accent-500 hover:bg-accent-600 transition-colors text-white font-heading font-medium px-32 py-16 rounded-md shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all" data-aos="fade-up" data-aos-delay="200">
+            Get Started
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-96 bg-white">
+        <div class="container mx-auto px-16">
+          <div class="text-center mb-64">
+            <h2 class="font-heading font-bold text-3xl md:text-4xl text-primary-500 mb-16" data-aos="fade-up">Contact Us</h2>
+            <p class="max-w-3xl mx-auto text-neutral-600" data-aos="fade-up" data-aos-delay="100">
+              Have questions or ready to enhance your security? Our team is ready to assist you.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-48">
+            <div data-aos="fade-right">
+              <form id="contact-form" class="space-y-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+                  <div>
+                    <label for="name" class="block text-neutral-700 mb-8">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required class="w-full px-16 py-12 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500">
+                  </div>
+                  <div>
+                    <label for="email" class="block text-neutral-700 mb-8">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required class="w-full px-16 py-12 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500">
+                  </div>
+                </div>
+                
+                <div>
+                  <label for="phone" class="block text-neutral-700 mb-8">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+91 12345 67890" required class="w-full px-16 py-12 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500">
+                </div>
+                
+                <div>
+                  <label for="service" class="block text-neutral-700 mb-8">Service Interested In</label>
+                  <select id="service" name="service" class="w-full px-16 py-12 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    <option value="security">Security Services</option>
+                    <option value="housekeeping">Housekeeping</option>
+                    <option value="valet">Valet Parking Services</option>
+                    <option value="industrial">Industrial Services</option>
+                    <option value="mall">Mall Services</option>
+                    <option value="location">Location Scan</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label for="message" class="block text-neutral-700 mb-8">Message</label>
+                  <textarea id="message" name="message" rows="5" placeholder="Your message here..." class="w-full px-16 py-12 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+                </div>
+                
+                <div>
+                  <button type="submit" class="bg-primary-500 hover:bg-primary-600 transition-colors text-white font-heading font-medium px-32 py-16 rounded-md shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all w-full md:w-auto">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+            
+            <div data-aos="fade-left" class="space-y-32">
+              <div>
+                <h3 class="font-heading font-semibold text-xl text-primary-800 mb-16">Contact Information</h3>
+                <div class="space-y-16">
+                  <div class="flex items-start">
+                    <i class="fas fa-map-marker-alt text-accent-500 mt-4 mr-16 w-16"></i>
+                    <p class="text-neutral-700">
+                      20-447/1, Penta Reddy Nagar Colony, West Venkatapuram,<br>
+                      Last Bus Stop, Alwal, Secunderabad - 500015
+                    </p>
+                  </div>
+                  
+                  <div class="flex items-center">
+                    <i class="fas fa-phone-alt text-accent-500 mr-16 w-16"></i>
+                    <p class="text-neutral-700">
+                      <a href="tel:+917993308159" class="hover:text-primary-500 transition-colors">+91 7993308159</a>,
+                      <a href="tel:+918008270535" class="hover:text-primary-500 transition-colors">+91 8008270535</a>
+                    </p>
+                  </div>
+                  
+                  <div class="flex items-center">
+                    <i class="fas fa-envelope text-accent-500 mr-16 w-16"></i>
+                    <p class="text-neutral-700">
+                      <a href="mailto:abhinayraju23@gmail.com" class="hover:text-primary-500 transition-colors">abhinayraju23@gmail.com</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="font-heading font-semibold text-xl text-primary-800 mb-16">Business Hours</h3>
+                <div class="space-y-8">
+                  <div class="flex justify-between">
+                    <span class="text-neutral-700">Monday - Friday:</span>
+                    <span class="text-neutral-700">9:00 AM - 6:00 PM</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-neutral-700">Saturday:</span>
+                    <span class="text-neutral-700">10:00 AM - 4:00 PM</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-neutral-700">Sunday:</span>
+                    <span class="text-neutral-700">Closed</span>
+                  </div>
+                  <p class="text-neutral-600 mt-16">
+                    <strong>Note:</strong> Our security services are available 24/7.
+                  </p>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="font-heading font-semibold text-xl text-primary-800 mb-16">Our Location</h3>
+                <div id="map" class="h-[300px] w-full rounded-lg shadow-lg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-primary-900 text-white py-64">
+      <div class="container mx-auto px-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-32 mb-48">
+          <div>
+            <h3 class="font-heading font-bold text-xl mb-24">Sai Ramya Security</h3>
+            <p class="text-neutral-300 mb-24">
+              Professional security and facility management solutions for businesses and institutions.
+            </p>
+            <div class="flex space-x-16">
+              <a href="#" class="text-white hover:text-accent-300 transition-colors"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-white hover:text-accent-300 transition-colors"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white hover:text-accent-300 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="text-white hover:text-accent-300 transition-colors"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="font-heading font-bold text-xl mb-24">Our Services</h3>
+            <ul class="space-y-12">
+              <li><a href="#services" class="text-neutral-300 hover:text-white transition-colors">Security Services</a></li>
+              <li><a href="#services" class="text-neutral-300 hover:text-white transition-colors">Housekeeping</a></li>
+              <li><a href="#services" class="text-neutral-300 hover:text-white transition-colors">Valet Parking Services</a></li>
+              <li><a href="#services" class="text-neutral-300 hover:text-white transition-colors">Industrial Services</a></li>
+              <li><a href="#services" class="text-neutral-300 hover:text-white transition-colors">Mall Services</a></li>
+              <li><a href="#services" class="text-neutral-300 hover:text-white transition-colors">Location Scan</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-heading font-bold text-xl mb-24">Quick Links</h3>
+            <ul class="space-y-12">
+              <li><a href="#home" class="text-neutral-300 hover:text-white transition-colors">Home</a></li>
+              <li><a href="#about" class="text-neutral-300 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#services" class="text-neutral-300 hover:text-white transition-colors">Services</a></li>
+              <li><a href="#contact" class="text-neutral-300 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="#" class="text-neutral-300 hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="#" class="text-neutral-300 hover:text-white transition-colors">Terms of Service</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-heading font-bold text-xl mb-24">Contact Us</h3>
+            <ul class="space-y-16">
+              <li class="flex">
+                <i class="fas fa-map-marker-alt text-accent-500 mt-4 mr-16 w-16"></i>
+                <span class="text-neutral-300">Penta Reddy Nagar Colony, Secunderabad - 500015</span>
+              </li>
+              <li class="flex">
+                <i class="fas fa-phone-alt text-accent-500 mr-16 w-16"></i>
+                <span class="text-neutral-300">+91 7993308159, +91 8008270535</span>
+              </li>
+              <li class="flex">
+                <i class="fas fa-envelope text-accent-500 mr-16 w-16"></i>
+                <span class="text-neutral-300">abhinayraju23@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="pt-32 border-t border-primary-800 text-center md:text-left md:flex md:justify-between">
+          <p class="text-neutral-400">© 2025 Sai Ramya Security Services. All rights reserved.</p>
+          <p class="text-neutral-400 mt-8 md:mt-0">Designed with ❤️ for excellent service</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

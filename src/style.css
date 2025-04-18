@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Custom transition for navbar */
+#navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Custom animation for hero arrow */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Custom animation for service icons */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-12px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s ease;
+}
+
+/* Custom styles for form inputs */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #0A2463;
+  box-shadow: 0 0 0 3px rgba(10, 36, 99, 0.1);
+}
+
+/* Leaflet map fixes */
+.leaflet-control-attribution {
+  font-size: 8px;
+}
+
+/* Mobile menu transition */
+#mobile-menu {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Custom transition for hover effects */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Unique styling for the shopping mall icon */
+.fa-shopping-mall:before {
+  content: "\f54f"; /* Using shopping bag icon as fallback */
+}
+
+/* Custom underline animation for menu items */
+.hover\:text-accent-300:hover {
+  position: relative;
+}
+
+.hover\:text-accent-300:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #F4777D; /* accent-300 */
+  transition: all 0.3s ease;
+}
+
+.hover\:text-accent-300:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/* Focus styles for accessibility */
+a:focus, button:focus {
+  outline: 2px solid #0A2463;
+  outline-offset: 2px;
+}
